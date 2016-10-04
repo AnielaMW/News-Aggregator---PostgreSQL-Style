@@ -1,0 +1,12 @@
+<h1>Slacking Off Articles</h1>
+<h2>All the news that's fit to be distracted by.</h2>
+<ul>
+  <% @articles.each do |article| %>
+    <li><h3><%= article.title %></h3>
+      <p><%= article.description %></p>
+      <h4><a href="<%= article.url %>" target="blank"><%= article.url %></a></h4>
+    </li>
+  <% end %>
+</ul>
+
+<p><a href="/articles/new">Post New Articles</a></p>
